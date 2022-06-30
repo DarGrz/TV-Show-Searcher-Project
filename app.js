@@ -53,7 +53,7 @@ let showsApp = {
             showTitle = show.name;
 
             let network = "-";
-            if(!show.network) network = show.network;
+            if(show.network) network = show.network.name;
 
             let officialSite = "-";
             if(show.officialSite) officialSite = show.officialSite;
@@ -63,9 +63,9 @@ let showsApp = {
 
             let summary = show.summary;
             summary = `
-                <p>Show: ${showTitle} </p>
-                <p>Show: ${premiered} </p>
-                <p>Show: ${network} </p>
+                <p>Title: ${showTitle} </p>
+                <p>Premiered: ${premiered} </p>
+                <p>Network: ${network} </p>
                 <br>
             ` + summary;
 
